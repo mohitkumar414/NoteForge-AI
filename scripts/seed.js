@@ -408,6 +408,782 @@ const cseSem1Data = [
     }
 ];
 
+const eceSem1Data = [
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 1,
+        "subject_name": "Mathematics - I",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Solid Geometry",
+                "topics": [
+                    "Basic ideas of equation of plane and straight line",
+                    "Intersection of planes",
+                    "Shortest distance",
+                    "Equation of sphere and equation of tangent plane",
+                    "Equation of cone",
+                    "Equation of cylinder",
+                    "Identification of conicoids and its rough sketches"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Differential Calculus of One Variable",
+                "topics": [
+                    "Successive differentiation and Leibnitz's theorem",
+                    "Expansion of functions into Taylor's and Maclaurin Series",
+                    "Tangent and Normal of a curve",
+                    "Point of inflexion",
+                    "Concavity and Convexity",
+                    "Curvature and radius of curvature",
+                    "Asymptotes of Cartesian curves and curve tracing"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Differential Calculus of Two or More Variables",
+                "topics": [
+                    "Limit, Continuity and differentiability",
+                    "Partial derivative",
+                    "Euler's theorem",
+                    "Chain rule",
+                    "Differentiation of implicit function",
+                    "Total differentiation",
+                    "Taylor's expansion",
+                    "Jacobian",
+                    "Maxima and minima of function of two variables",
+                    "Lagrange's method of undetermined multipliers"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Infinite Series",
+                "topics": [
+                    "Convergence and Divergence of Infinite Series",
+                    "General properties",
+                    "Comparison test",
+                    "Integral test",
+                    "D'Alembert's Ratio test",
+                    "Raabe's test",
+                    "Logarithmic test",
+                    "Cauchy's root test",
+                    "Alternating Sum",
+                    "Leibnitz's rule of Convergence",
+                    "Absolute Convergent and Conditionally Convergent Series",
+                    "Convergence of Power Series"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 1,
+        "subject_name": "Physics",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Vector Analysis",
+                "topics": [
+                    "Scalar and vector field",
+                    "Gradient of scalar field",
+                    "Divergence and curl of a vector field and their physical meaning",
+                    "Line, surface and volume integrals",
+                    "Gauss' divergence theorem",
+                    "Stoke's theorem"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Polarization of Light",
+                "topics": [
+                    "Introduction to polarization of light",
+                    "Malus law",
+                    "Brewster's law",
+                    "Double refraction",
+                    "Nicol prism",
+                    "Retardation plates",
+                    "Production and analysis of plane, circularly and elliptically polarized light",
+                    "Introduction to Polaroids"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Electromagnetic Theory",
+                "topics": [
+                    "Gauss, Faraday and Ampere's law",
+                    "Maxwell's field equations",
+                    "Poynting theorem",
+                    "Propagation of electromagnetic wave in free space"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Modern Physics",
+                "topics": [
+                    "Introduction and characterization of X-rays",
+                    "Bragg's law",
+                    "Photoelectric effect and its explanation",
+                    "Einstein's photoelectric equation",
+                    "Compton effect",
+                    "Concept of de-Broglie wave",
+                    "Wave and group velocity",
+                    "Uncertainty principle"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Quantum Physics",
+                "topics": [
+                    "Wave function and its physical meaning",
+                    "Schrödinger's wave equation",
+                    "Time independent and time dependent form",
+                    "Eigen function and Eigen values",
+                    "Particle in a box",
+                    "Tunneling effect"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Relativistic Mechanics",
+                "topics": [
+                    "Michelson Morley experiment",
+                    "Postulates of Special theory of relativity",
+                    "Galilean transformation",
+                    "Lorentz transformation",
+                    "Length contraction",
+                    "Time dilation and velocity addition",
+                    "Mass-energy relation",
+                    "Variation of mass with energy"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Laser Physics",
+                "topics": [
+                    "Spontaneous and stimulated emission",
+                    "Population inversion",
+                    "Einstein's A & B coefficients",
+                    "Coherence-spatial and temporal",
+                    "Measurement of temporal coherence length using Michelson interferometer",
+                    "Ruby, He-Ne and other types of lasers and their applications"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 1,
+        "subject_name": "Electrical Technology",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "DC Networks",
+                "topics": [
+                    "Kirchhoff's law",
+                    "Node Voltage and Mesh Current method",
+                    "Delta-Star and Star-delta transformation",
+                    "Superposition theorem",
+                    "Thevenin's and Norton's theorem",
+                    "Maximum power transfer theorem"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Single phase AC circuits",
+                "topics": [
+                    "Single phase EMF generation",
+                    "Average and RMS value of Sinusoidal and Rectangular waveforms",
+                    "Form factor and peak factor",
+                    "Solution of R,L,C series and parallel circuits",
+                    "Complex representation of Impedances",
+                    "Phasor diagram",
+                    "Power factor"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Three phase balance AC circuits",
+                "topics": [
+                    "Three phase EMF generation",
+                    "Delta and Star connection",
+                    "Line and phase quantities",
+                    "Balance supply voltage and balanced load",
+                    "Phasor diagram",
+                    "Measurement of power in three phase circuits by two wattmeter method"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Magnetic Circuits",
+                "topics": [
+                    "Concepts of self and mutual inductances",
+                    "Co-efficient of coupling",
+                    "B-H Curve",
+                    "Hysteresis loop"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Basics of Single phase Transformer",
+                "topics": [
+                    "Construction and working principle",
+                    "EMF equation",
+                    "Phasor diagram on No load and full load",
+                    "Equivalent circuit",
+                    "Regulation, efficiency",
+                    "Short circuit and open circuit test",
+                    "Introduction to single phase auto transformer"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Basics of DC machines",
+                "topics": [
+                    "Principle of operation",
+                    "Classification",
+                    "EMF and torque equations",
+                    "Characteristics of generators and motors",
+                    "Speed control methods and starting techniques"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Basics of three phase Induction motor",
+                "topics": [
+                    "Principle of rotating magnetic field",
+                    "Construction and principle of three phase IM",
+                    "Torque-speed characteristic of three phase IM",
+                    "Starting methods and speed control of three phase IM"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Measuring Instruments",
+                "topics": [
+                    "Moving coil and moving Iron Ammeters and voltmeters",
+                    "Dynamometer type wattmeter",
+                    "Induction type energy meter"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 1,
+        "subject_name": "Introduction to Manufacturing Process",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Fitting trade",
+                "topics": [
+                    "Study of fitting tools equipments and different fitting operations",
+                    "Preparation of work piece as per given specification"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Carpentry",
+                "topics": [
+                    "Study of carpentry tools, equipments and different joints",
+                    "Preparation of a job on one of the joints"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Foundry",
+                "topics": [
+                    "Introduction to foundry, pattern, pattern allowances",
+                    "Ingredients of moulding sand, melting furnaces",
+                    "Foundry tools and their purposes",
+                    "Demo of mould preparation, preparation of mould as a job"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Smithy",
+                "topics": [
+                    "Forging, hot working and cold working",
+                    "Smithy tools",
+                    "Preparation of a job"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 1,
+        "subject_name": "Engineering Mechanics",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Various Systems of Forces",
+                "topics": [
+                    "Statically Equivalent Force systems",
+                    "Simplest Equivalent of a system of forces using vector methods"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Equilibrium",
+                "topics": [
+                    "Free Body Diagram",
+                    "Equations of equilibrium and their applications to various system of forces",
+                    "Plane Trusses and frames"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Friction",
+                "topics": [
+                    "Friction on dry surfaces",
+                    "Static, Kinetic and rolling friction",
+                    "Applications to inclined planes, Wedges and blocks"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Kinematics and Kinetics of a Particle",
+                "topics": [
+                    "Rectilinear and curvilinear translations",
+                    "Normal and tangential components of acceleration",
+                    "Radial and transverse components of acceleration"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Kinematics and Kinetics of Rigid Bodies in Plane Motion",
+                "topics": [
+                    "Angular velocity and angular acceleration",
+                    "Effective Forces on a rigid body",
+                    "D'Alembert's Principle",
+                    "Rotation of Rigid bodies",
+                    "Rolling motion & Plane motion of rigid bodies"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Impulse and Momentum",
+                "topics": [
+                    "Principle of impulse and momentum",
+                    "Linear impulse and linear momentum",
+                    "Angular impulse and angular momentum",
+                    "Impact of elastic bodies"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Work, Energy and Power",
+                "topics": [
+                    "Work done by forces and couples",
+                    "Potential, Elastic and kinetic energy",
+                    "Work-energy theorem",
+                    "Work-energy analysis",
+                    "Conservation of energy",
+                    "Concept of Power and efficiency"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Centroid and Moment of Inertia",
+                "topics": [
+                    "Centroid and M.I. of area",
+                    "Radius of gyration",
+                    "Parallel axis and perpendicular axis theorem"
+                ]
+            }
+        ]
+    }
+];
+
+const meSem1Data = [
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 1,
+        "subject_name": "Mathematics - I",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Solid Geometry",
+                "topics": [
+                    "Basic ideas of equation of plane and straight line",
+                    "Intersection of planes",
+                    "Shortest distance",
+                    "Equation of sphere and equation of tangent plane",
+                    "Equation of cone",
+                    "Equation of cylinder",
+                    "Identification of conicoids and its rough sketches"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Differential Calculus of One Variable",
+                "topics": [
+                    "Successive differentiation and Leibnitz's theorem",
+                    "Expansion of functions into Taylor's and Maclaurin Series",
+                    "Tangent and Normal of a curve",
+                    "Point of inflexion",
+                    "Concavity and Convexity",
+                    "Curvature and radius of curvature",
+                    "Asymptotes of Cartesian curves and curve tracing"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Differential Calculus of Two or More Variables",
+                "topics": [
+                    "Limit, Continuity and differentiability",
+                    "Partial derivative",
+                    "Euler's theorem",
+                    "Chain rule",
+                    "Differentiation of implicit function",
+                    "Total differentiation",
+                    "Taylor's expansion",
+                    "Jacobian",
+                    "Maxima and minima of function of two variables",
+                    "Lagrange's method of undetermined multipliers"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Infinite Series",
+                "topics": [
+                    "Convergence and Divergence of Infinite Series",
+                    "General properties",
+                    "Comparison test",
+                    "Integral test",
+                    "D'Alembert's Ratio test",
+                    "Raabe's test",
+                    "Logarithmic test",
+                    "Cauchy's root test",
+                    "Alternating Sum",
+                    "Leibnitz's rule of Convergence",
+                    "Absolute Convergent and Conditionally Convergent Series",
+                    "Convergence of Power Series"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 1,
+        "subject_name": "Physics",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Vector Analysis",
+                "topics": [
+                    "Scalar and vector field",
+                    "Gradient of scalar field",
+                    "Divergence and curl of a vector field and their physical meaning",
+                    "Line, surface and volume integrals",
+                    "Gauss' divergence theorem",
+                    "Stoke's theorem"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Polarization of Light",
+                "topics": [
+                    "Introduction to polarization of light",
+                    "Malus law",
+                    "Brewster's law",
+                    "Double refraction",
+                    "Nicol prism",
+                    "Retardation plates",
+                    "Production and analysis of plane, circularly and elliptically polarized light",
+                    "Introduction to Polaroids"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Electromagnetic Theory",
+                "topics": [
+                    "Gauss, Faraday and Ampere's law",
+                    "Maxwell's field equations",
+                    "Poynting theorem",
+                    "Propagation of electromagnetic wave in free space"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Modern Physics",
+                "topics": [
+                    "Introduction and characterization of X-rays",
+                    "Bragg's law",
+                    "Photoelectric effect and its explanation",
+                    "Einstein's photoelectric equation",
+                    "Compton effect",
+                    "Concept of de-Broglie wave",
+                    "Wave and group velocity",
+                    "Uncertainty principle"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Quantum Physics",
+                "topics": [
+                    "Wave function and its physical meaning",
+                    "Schrödinger's wave equation",
+                    "Time independent and time dependent form",
+                    "Eigen function and Eigen values",
+                    "Particle in a box",
+                    "Tunneling effect"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Relativistic Mechanics",
+                "topics": [
+                    "Michelson Morley experiment",
+                    "Postulates of Special theory of relativity",
+                    "Galilean transformation",
+                    "Lorentz transformation",
+                    "Length contraction",
+                    "Time dilation and velocity addition",
+                    "Mass-energy relation",
+                    "Variation of mass with energy"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Laser Physics",
+                "topics": [
+                    "Spontaneous and stimulated emission",
+                    "Population inversion",
+                    "Einstein's A & B coefficients",
+                    "Coherence-spatial and temporal",
+                    "Measurement of temporal coherence length using Michelson interferometer",
+                    "Ruby, He-Ne and other types of lasers and their applications"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 1,
+        "subject_name": "Electrical Technology",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "DC Networks",
+                "topics": [
+                    "Kirchhoff's law",
+                    "Node Voltage and Mesh Current method",
+                    "Delta-Star and Star-delta transformation",
+                    "Superposition theorem",
+                    "Thevenin's and Norton's theorem",
+                    "Maximum power transfer theorem"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Single phase AC circuits",
+                "topics": [
+                    "Single phase EMF generation",
+                    "Average and RMS value of Sinusoidal and Rectangular waveforms",
+                    "Form factor and peak factor",
+                    "Solution of R,L,C series and parallel circuits",
+                    "Complex representation of Impedances",
+                    "Phasor diagram",
+                    "Power factor"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Three phase balance AC circuits",
+                "topics": [
+                    "Three phase EMF generation",
+                    "Delta and Star connection",
+                    "Line and phase quantities",
+                    "Balance supply voltage and balanced load",
+                    "Phasor diagram",
+                    "Measurement of power in three phase circuits by two wattmeter method"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Magnetic Circuits",
+                "topics": [
+                    "Concepts of self and mutual inductances",
+                    "Co-efficient of coupling",
+                    "B-H Curve",
+                    "Hysteresis loop"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Basics of Single phase Transformer",
+                "topics": [
+                    "Construction and working principle",
+                    "EMF equation",
+                    "Phasor diagram on No load and full load",
+                    "Equivalent circuit",
+                    "Regulation, efficiency",
+                    "Short circuit and open circuit test",
+                    "Introduction to single phase auto transformer"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Basics of DC machines",
+                "topics": [
+                    "Principle of operation",
+                    "Classification",
+                    "EMF and torque equations",
+                    "Characteristics of generators and motors",
+                    "Speed control methods and starting techniques"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Basics of three phase Induction motor",
+                "topics": [
+                    "Principle of rotating magnetic field",
+                    "Construction and principle of three phase IM",
+                    "Torque-speed characteristic of three phase IM",
+                    "Starting methods and speed control of three phase IM"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Measuring Instruments",
+                "topics": [
+                    "Moving coil and moving Iron Ammeters and voltmeters",
+                    "Dynamometer type wattmeter",
+                    "Induction type energy meter"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 1,
+        "subject_name": "Introduction to Manufacturing Process",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Fitting trade",
+                "topics": [
+                    "Study of fitting tools equipments and different fitting operations",
+                    "Preparation of work piece as per given specification"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Carpentry",
+                "topics": [
+                    "Study of carpentry tools, equipments and different joints",
+                    "Preparation of a job on one of the joints"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Foundry",
+                "topics": [
+                    "Introduction to foundry, pattern, pattern allowances",
+                    "Ingredients of moulding sand, melting furnaces",
+                    "Foundry tools and their purposes",
+                    "Demo of mould preparation, preparation of mould as a job"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Smithy",
+                "topics": [
+                    "Forging, hot working and cold working",
+                    "Smithy tools",
+                    "Preparation of a job"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 1,
+        "subject_name": "Engineering Mechanics",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Various Systems of Forces",
+                "topics": [
+                    "Statically Equivalent Force systems",
+                    "Simplest Equivalent of a system of forces using vector methods"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Equilibrium",
+                "topics": [
+                    "Free Body Diagram",
+                    "Equations of equilibrium and their applications to various system of forces",
+                    "Plane Trusses and frames"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Friction",
+                "topics": [
+                    "Friction on dry surfaces",
+                    "Static, Kinetic and rolling friction",
+                    "Applications to inclined planes, Wedges and blocks"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Kinematics and Kinetics of a Particle",
+                "topics": [
+                    "Rectilinear and curvilinear translations",
+                    "Normal and tangential components of acceleration",
+                    "Radial and transverse components of acceleration"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Kinematics and Kinetics of Rigid Bodies in Plane Motion",
+                "topics": [
+                    "Angular velocity and angular acceleration",
+                    "Effective Forces on a rigid body",
+                    "D'Alembert's Principle",
+                    "Rotation of Rigid bodies",
+                    "Rolling motion & Plane motion of rigid bodies"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Impulse and Momentum",
+                "topics": [
+                    "Principle of impulse and momentum",
+                    "Linear impulse and linear momentum",
+                    "Angular impulse and angular momentum",
+                    "Impact of elastic bodies"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Work, Energy and Power",
+                "topics": [
+                    "Work done by forces and couples",
+                    "Potential, Elastic and kinetic energy",
+                    "Work-energy theorem",
+                    "Work-energy analysis",
+                    "Conservation of energy",
+                    "Concept of Power and efficiency"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Centroid and Moment of Inertia",
+                "topics": [
+                    "Centroid and M.I. of area",
+                    "Radius of gyration",
+                    "Parallel axis and perpendicular axis theorem"
+                ]
+            }
+        ]
+    }
+];
+
 const cseSem2Data = [
     {
         "branch": "Computer Science & Engineering",
@@ -778,6 +1554,792 @@ const cseSem2Data = [
                     "Centroid and M.I. of area",
                     "Radius of gyration",
                     "Parallel axis and perpendicular axis theorem"
+                ]
+            }
+        ]
+    }
+];
+
+const eceSem2Data = [
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 2,
+        "subject_name": "Mathematics - II",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Integral Calculus",
+                "topics": [
+                    "Reduction formula for integrals",
+                    "Convergence of improper integrals",
+                    "Beta and Gamma function",
+                    "Differentiation under the sign of integration",
+                    "Application of integrals (Arc length, Area, Volume, Surface area of revolution)"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Multiple Integrals",
+                "topics": [
+                    "Double and triple integrals",
+                    "Evaluation of double integrals",
+                    "Change of order of integration",
+                    "Change of variables",
+                    "Evaluation of triple integrals",
+                    "Determination of volume and Centre of gravity using double and triple integrals",
+                    "Dirichlet's integrals"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Differential Equations",
+                "topics": [
+                    "Differential equation of 1st order and 1st degree",
+                    "Linear differential equation of Second order with Constant and variable coefficients",
+                    "Complementary function and particular integrals",
+                    "Method of variation of parameters",
+                    "Cauchy's and Legendre's equations",
+                    "Simultaneous linear equations with Constant coefficients"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Matrices",
+                "topics": [
+                    "Rank of matrix",
+                    "Linear Independence/dependence of vectors",
+                    "Consistency and solution of system of linear equations by rank method",
+                    "Eigenvalues and Eigenvectors",
+                    "Cayley-Hamilton's Theorem",
+                    "Diagonalization of a square matrix"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 2,
+        "subject_name": "Chemistry",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Quantum Mechanics",
+                "topics": [
+                    "Schrodinger Wave Equation",
+                    "Particle in one dimensional box",
+                    "Illustrating energy quantization"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Thermodynamics",
+                "topics": [
+                    "Laws of Thermodynamics",
+                    "Entropy Concept",
+                    "Chemical potential"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Electrochemistry",
+                "topics": [
+                    "Concepts of electrode potentials",
+                    "Nernst Equation",
+                    "Reference Electrode",
+                    "Chemistry of Secondary cells (e.g. Lead-acid or Ni-Cd cells)",
+                    "Corrosion & its Prevention",
+                    "Electrochemical theory of corrosion",
+                    "Types of corrosion",
+                    "Corrosion prevention & its control"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Chemical Kinetics / Reaction Dynamics",
+                "topics": [
+                    "Rate laws",
+                    "First order & Second order of reaction",
+                    "Reversible first order reaction"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Stereochemistry and Organic Reactions",
+                "topics": [
+                    "Concept of chirality, enantiomers/diastereoisomers",
+                    "Centre & axis of chirality",
+                    "Optical purity",
+                    "Relative & absolute configurations (R-S & E-Z notations)",
+                    "Geometrical isomers",
+                    "Hofman reaction",
+                    "Riemer-Tieman reaction",
+                    "Diels Alder reaction",
+                    "Cannizaro reaction",
+                    "Skraup synthesis",
+                    "Perkin Condensation",
+                    "Aldol Condensation"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Polymers",
+                "topics": [
+                    "Concept of polymerization",
+                    "Types of Polymers",
+                    "Mechanism of anionic/cationic/free radical polymerization",
+                    "Commercial polymers & their uses (Nylon, PE, PP, ABS, BUNA-S, BUNA-N)"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Coordination Chemistry",
+                "topics": [
+                    "Nomenclature of complexes",
+                    "Isomerism",
+                    "Valence Bond Theory",
+                    "Crystal Field Theory",
+                    "Molecular orbital theory of Homo nuclear & hetero nuclear diatomic Molecules"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 2,
+        "subject_name": "English for Communication",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Grammar Principles and Vocabulary Building",
+                "topics": [
+                    "Exposure to basics of grammar",
+                    "Parts of speech",
+                    "Tenses",
+                    "Active and passive voice",
+                    "Reported speech",
+                    "Idioms and Phrases",
+                    "Vocabulary development through prefixes, suffixes and word roots"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Effective Sentence Construction",
+                "topics": [
+                    "Clarity and precision in construction",
+                    "Strategies for effectiveness in writing"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Paragraphs",
+                "topics": [
+                    "Definition and structure",
+                    "Types and Composition",
+                    "Unity of theme",
+                    "Coherence and organization patterns"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Note-making",
+                "topics": [
+                    "Uses and steps in note-making",
+                    "Identification of important points",
+                    "Reduction to phrases",
+                    "Selection of suitable note format",
+                    "Types of notes: tree diagram, block list, table"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Letter Writing",
+                "topics": [
+                    "Business, Official and Informal letters",
+                    "Communicative purpose and strategy",
+                    "Letter format and mechanics",
+                    "Letters of request, complaint and invitation"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Reading Techniques",
+                "topics": [
+                    "Skimming and Scanning",
+                    "Quick reading for gist",
+                    "Suggesting titles",
+                    "Looking for specific information"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Description of Graphics",
+                "topics": [
+                    "Kinds of graphs",
+                    "Construction and use",
+                    "Application in scientific texts",
+                    "Interpretation of graphs using expressions of comparison and contrast"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Reading Comprehension",
+                "topics": [
+                    "Reading to retrieve information",
+                    "Techniques of comprehension",
+                    "Finding clues to locate important points",
+                    "Answering objective type questions (inference, elimination)"
+                ]
+            },
+            {
+                "module_number": 9,
+                "title": "Technical Report-Writing",
+                "topics": [
+                    "Kinds of reports: proposals, progress and final reports",
+                    "Structure and features",
+                    "Process of writing a report",
+                    "Editing"
+                ]
+            },
+            {
+                "module_number": 10,
+                "title": "Book Reviews",
+                "topics": [
+                    "Oral and written review of a chosen novel/play",
+                    "Brief written analysis including summary and appreciation",
+                    "Oral presentation of the novel before class"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 2,
+        "subject_name": "Computer Programming & Data Structure",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Computer Fundamental & Programming in C",
+                "topics": [
+                    "History, Generations, Characteristic and Applications of Computers",
+                    "Computer Languages, Types of Software",
+                    "Introduction to C: Variables, Operators, Statements, Conditions",
+                    "Looping and decision making (if, else, for, while, do-while, Switch Case, goto)"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Functions",
+                "topics": [
+                    "Definition, Declaration, Calling",
+                    "Passing arguments, Reference arguments",
+                    "Variables and storage classes"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Arrays & Structures",
+                "topics": [
+                    "Arrays: Introduction, Representation, Initialization & Accessing of 1D, 2D and Multi dimensional Arrays",
+                    "Structures: Specifying the structure, Defining structure Variables, Accessing structure members, Structures within structure"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Pointers",
+                "topics": [
+                    "Address and Pointers",
+                    "Pointers and Arrays",
+                    "Pointers and Functions"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "File Handling",
+                "topics": [
+                    "Introduction, Defining and opening a file",
+                    "Closing a file",
+                    "Input/Output operations on Files"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Introduction to Object Oriented Programming Concepts",
+                "topics": [
+                    "Difference between structured and OOPS concept",
+                    "Advantages of OOPS",
+                    "Object and classes: Simple classes, Constructors, Destructors",
+                    "Object as function Arguments",
+                    "Inheritance: Definition, Types, use of public, protected, private keywords",
+                    "Polymorphism: Definition, Function Overloading, Operator Overloading"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Basics Of Data Structure",
+                "topics": [
+                    "Introduction & Classification of Data Structure",
+                    "Introduction to Linear & Non-linear Data Structures",
+                    "Arrays, Stacks, Queues, Linked Lists, Tree & Graph"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Electronics & Communication Engineering",
+        "semester": 2,
+        "subject_name": "Engineering Drawing",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Introduction of Engineering Graphics",
+                "topics": [
+                    "Need of engineering graphics",
+                    "Lettering and dimensioning",
+                    "Types of lines",
+                    "Scale preparation"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Projection of Point and Straight Lines",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Projection of Solids",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Section of Solids",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Intersection of Solids",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Development of Surfaces",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Orthographic Projection",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Isometric Projections",
+                "topics": [
+                    "Isometric scale",
+                    "One plate projection"
+                ]
+            }
+        ]
+    }
+];
+
+const meSem2Data = [
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 2,
+        "subject_name": "Mathematics - II",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Integral Calculus",
+                "topics": [
+                    "Reduction formula for integrals",
+                    "Convergence of improper integrals",
+                    "Beta and Gamma function",
+                    "Differentiation under the sign of integration",
+                    "Application of integrals (Arc length, Area, Volume, Surface area of revolution)"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Multiple Integrals",
+                "topics": [
+                    "Double and triple integrals",
+                    "Evaluation of double integrals",
+                    "Change of order of integration",
+                    "Change of variables",
+                    "Evaluation of triple integrals",
+                    "Determination of volume and Centre of gravity using double and triple integrals",
+                    "Dirichlet's integrals"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Differential Equations",
+                "topics": [
+                    "Differential equation of 1st order and 1st degree",
+                    "Linear differential equation of Second order with Constant and variable coefficients",
+                    "Complementary function and particular integrals",
+                    "Method of variation of parameters",
+                    "Cauchy's and Legendre's equations",
+                    "Simultaneous linear equations with Constant coefficients"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Matrices",
+                "topics": [
+                    "Rank of matrix",
+                    "Linear Independence/dependence of vectors",
+                    "Consistency and solution of system of linear equations by rank method",
+                    "Eigenvalues and Eigenvectors",
+                    "Cayley-Hamilton's Theorem",
+                    "Diagonalization of a square matrix"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 2,
+        "subject_name": "Chemistry",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Quantum Mechanics",
+                "topics": [
+                    "Schrodinger Wave Equation",
+                    "Particle in one dimensional box",
+                    "Illustrating energy quantization"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Thermodynamics",
+                "topics": [
+                    "Laws of Thermodynamics",
+                    "Entropy Concept",
+                    "Chemical potential"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Electrochemistry",
+                "topics": [
+                    "Concepts of electrode potentials",
+                    "Nernst Equation",
+                    "Reference Electrode",
+                    "Chemistry of Secondary cells (e.g. Lead-acid or Ni-Cd cells)",
+                    "Corrosion & its Prevention",
+                    "Electrochemical theory of corrosion",
+                    "Types of corrosion",
+                    "Corrosion prevention & its control"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Chemical Kinetics / Reaction Dynamics",
+                "topics": [
+                    "Rate laws",
+                    "First order & Second order of reaction",
+                    "Reversible first order reaction"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Stereochemistry and Organic Reactions",
+                "topics": [
+                    "Concept of chirality, enantiomers/diastereoisomers",
+                    "Centre & axis of chirality",
+                    "Optical purity",
+                    "Relative & absolute configurations (R-S & E-Z notations)",
+                    "Geometrical isomers",
+                    "Hofman reaction",
+                    "Riemer-Tieman reaction",
+                    "Diels Alder reaction",
+                    "Cannizaro reaction",
+                    "Skraup synthesis",
+                    "Perkin Condensation",
+                    "Aldol Condensation"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Polymers",
+                "topics": [
+                    "Concept of polymerization",
+                    "Types of Polymers",
+                    "Mechanism of anionic/cationic/free radical polymerization",
+                    "Commercial polymers & their uses (Nylon, PE, PP, ABS, BUNA-S, BUNA-N)"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Coordination Chemistry",
+                "topics": [
+                    "Nomenclature of complexes",
+                    "Isomerism",
+                    "Valence Bond Theory",
+                    "Crystal Field Theory",
+                    "Molecular orbital theory of Homo nuclear & hetero nuclear diatomic Molecules"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 2,
+        "subject_name": "English for Communication",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Grammar Principles and Vocabulary Building",
+                "topics": [
+                    "Exposure to basics of grammar",
+                    "Parts of speech",
+                    "Tenses",
+                    "Active and passive voice",
+                    "Reported speech",
+                    "Idioms and Phrases",
+                    "Vocabulary development through prefixes, suffixes and word roots"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Effective Sentence Construction",
+                "topics": [
+                    "Clarity and precision in construction",
+                    "Strategies for effectiveness in writing"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Paragraphs",
+                "topics": [
+                    "Definition and structure",
+                    "Types and Composition",
+                    "Unity of theme",
+                    "Coherence and organization patterns"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Note-making",
+                "topics": [
+                    "Uses and steps in note-making",
+                    "Identification of important points",
+                    "Reduction to phrases",
+                    "Selection of suitable note format",
+                    "Types of notes: tree diagram, block list, table"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Letter Writing",
+                "topics": [
+                    "Business, Official and Informal letters",
+                    "Communicative purpose and strategy",
+                    "Letter format and mechanics",
+                    "Letters of request, complaint and invitation"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Reading Techniques",
+                "topics": [
+                    "Skimming and Scanning",
+                    "Quick reading for gist",
+                    "Suggesting titles",
+                    "Looking for specific information"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Description of Graphics",
+                "topics": [
+                    "Kinds of graphs",
+                    "Construction and use",
+                    "Application in scientific texts",
+                    "Interpretation of graphs using expressions of comparison and contrast"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Reading Comprehension",
+                "topics": [
+                    "Reading to retrieve information",
+                    "Techniques of comprehension",
+                    "Finding clues to locate important points",
+                    "Answering objective type questions (inference, elimination)"
+                ]
+            },
+            {
+                "module_number": 9,
+                "title": "Technical Report-Writing",
+                "topics": [
+                    "Kinds of reports: proposals, progress and final reports",
+                    "Structure and features",
+                    "Process of writing a report",
+                    "Editing"
+                ]
+            },
+            {
+                "module_number": 10,
+                "title": "Book Reviews",
+                "topics": [
+                    "Oral and written review of a chosen novel/play",
+                    "Brief written analysis including summary and appreciation",
+                    "Oral presentation of the novel before class"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 2,
+        "subject_name": "Computer Programming & Data Structure",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Computer Fundamental & Programming in C",
+                "topics": [
+                    "History, Generations, Characteristic and Applications of Computers",
+                    "Computer Languages, Types of Software",
+                    "Introduction to C: Variables, Operators, Statements, Conditions",
+                    "Looping and decision making (if, else, for, while, do-while, Switch Case, goto)"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Functions",
+                "topics": [
+                    "Definition, Declaration, Calling",
+                    "Passing arguments, Reference arguments",
+                    "Variables and storage classes"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Arrays & Structures",
+                "topics": [
+                    "Arrays: Introduction, Representation, Initialization & Accessing of 1D, 2D and Multi dimensional Arrays",
+                    "Structures: Specifying the structure, Defining structure Variables, Accessing structure members, Structures within structure"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Pointers",
+                "topics": [
+                    "Address and Pointers",
+                    "Pointers and Arrays",
+                    "Pointers and Functions"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "File Handling",
+                "topics": [
+                    "Introduction, Defining and opening a file",
+                    "Closing a file",
+                    "Input/Output operations on Files"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Introduction to Object Oriented Programming Concepts",
+                "topics": [
+                    "Difference between structured and OOPS concept",
+                    "Advantages of OOPS",
+                    "Object and classes: Simple classes, Constructors, Destructors",
+                    "Object as function Arguments",
+                    "Inheritance: Definition, Types, use of public, protected, private keywords",
+                    "Polymorphism: Definition, Function Overloading, Operator Overloading"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Basics Of Data Structure",
+                "topics": [
+                    "Introduction & Classification of Data Structure",
+                    "Introduction to Linear & Non-linear Data Structures",
+                    "Arrays, Stacks, Queues, Linked Lists, Tree & Graph"
+                ]
+            }
+        ]
+    },
+    {
+        "branch": "Mechanical Engineering",
+        "semester": 2,
+        "subject_name": "Engineering Drawing",
+        "modules": [
+            {
+                "module_number": 1,
+                "title": "Introduction of Engineering Graphics",
+                "topics": [
+                    "Need of engineering graphics",
+                    "Lettering and dimensioning",
+                    "Types of lines",
+                    "Scale preparation"
+                ]
+            },
+            {
+                "module_number": 2,
+                "title": "Projection of Point and Straight Lines",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 3,
+                "title": "Projection of Solids",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 4,
+                "title": "Section of Solids",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 5,
+                "title": "Intersection of Solids",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 6,
+                "title": "Development of Surfaces",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 7,
+                "title": "Orthographic Projection",
+                "topics": [
+                    "One plate projection"
+                ]
+            },
+            {
+                "module_number": 8,
+                "title": "Isometric Projections",
+                "topics": [
+                    "Isometric scale",
+                    "One plate projection"
                 ]
             }
         ]
@@ -4238,6 +5800,52 @@ const eceSem7Data = [
     }
 ];
 
+// Utility function to sort an array of subject objects by 'subject_name'
+function sortSubjectsByName(dataArray) {
+    return dataArray.sort((a, b) => {
+        const subjectA = a.subject_name.toUpperCase(); // ignore upper and lowercase
+        const subjectB = b.subject_name.toUpperCase(); // ignore upper and lowercase
+        if (subjectA < subjectB) {
+            return -1;
+        }
+        if (subjectA > subjectB) {
+            return 1;
+        }
+        return 0;
+    });
+}
+
+// Semester 1
+sortSubjectsByName(cseSem1Data);
+sortSubjectsByName(eceSem1Data);
+sortSubjectsByName(meSem1Data);
+
+// Semester 2
+sortSubjectsByName(cseSem2Data);
+sortSubjectsByName(eceSem2Data);
+sortSubjectsByName(meSem2Data);
+
+// Semester 3
+sortSubjectsByName(cseSem3Data);
+sortSubjectsByName(eceSem3Data);
+
+// Semester 4
+sortSubjectsByName(cseSem4Data);
+sortSubjectsByName(eceSem4Data);
+
+// Semester 5
+sortSubjectsByName(cseSem5Data);
+sortSubjectsByName(eceSem5Data);
+
+// Semester 6
+sortSubjectsByName(cseSem6Data);
+sortSubjectsByName(itSem6Data);
+sortSubjectsByName(eceSem6Data);
+
+// Semester 7
+sortSubjectsByName(cseSem7Data);
+sortSubjectsByName(eceSem7Data);
+
 // --- 2. THE SCRIPT LOGIC ---
 
 const SubjectSchema = new mongoose.Schema({
@@ -4262,11 +5870,15 @@ async function seed() {
         // Optional: Clear existing subjects to prevent duplicates
         await Subject.deleteMany({});
 
-        console.log("🚀 Seeding CSE/IT Data...");
+        console.log("🚀 Seeding CSE/IT/ECE/ME Data...");
 
         // Insert CSE Data
         if (cseSem1Data.length) await Subject.insertMany(cseSem1Data);
+        if (eceSem1Data.length) await Subject.insertMany(eceSem1Data);
+        if (meSem1Data.length) await Subject.insertMany(meSem1Data);
         if (cseSem2Data.length) await Subject.insertMany(cseSem2Data);
+        if (eceSem2Data.length) await Subject.insertMany(eceSem2Data);
+        if (meSem2Data.length) await Subject.insertMany(meSem2Data);
         if (cseSem3Data.length) await Subject.insertMany(cseSem3Data);
         if (eceSem3Data.length) await Subject.insertMany(eceSem3Data);
         if (cseSem4Data.length) await Subject.insertMany(cseSem4Data);
@@ -4280,7 +5892,7 @@ async function seed() {
         if (eceSem7Data.length) await Subject.insertMany(eceSem7Data);
 
 
-        console.log("🔄 Auto-generating ECE & ME Data (Swapping Semesters)...");
+        console.log("🔄 Auto-generating IT Data...");
 
         // Logic: IT Sem 1,2,3,4,5,7 is same as CSE Sem 1,2,3,4,5,7
         const itSem1 = cseSem1Data.map(sub => ({
@@ -4314,29 +5926,6 @@ async function seed() {
             semester: 7
         }));
 
-        // Logic: ECE/ME Sem 1 is the same as CSE Sem 2
-        const eceSem1 = cseSem2Data.map(sub => ({
-            ...sub,
-            branch: "Electronics & Communication Engineering",
-            semester: 1
-        }));
-        const meSem1 = cseSem2Data.map(sub => ({
-            ...sub,
-            branch: "Mechanical Engineering",
-            semester: 1
-        }));
-
-        // Logic: ECE/ME Sem 2 is the same as CSE Sem 1
-        const eceSem2 = cseSem1Data.map(sub => ({
-            ...sub,
-            branch: "Electronics & Communication Engineering",
-            semester: 2
-        }));
-        const meSem2 = cseSem1Data.map(sub => ({
-            ...sub,
-            branch: "Mechanical Engineering",
-            semester: 2
-        }));
 
         // Insert the Swapped Data
         if (itSem1.length) await Subject.insertMany(itSem1);
@@ -4345,10 +5934,6 @@ async function seed() {
         if (itSem4.length) await Subject.insertMany(itSem4);
         if (itSem5.length) await Subject.insertMany(itSem5);
         if (itSem7.length) await Subject.insertMany(itSem7);
-        if (eceSem1.length) await Subject.insertMany(eceSem1);
-        if (meSem1.length) await Subject.insertMany(meSem1);
-        if (eceSem2.length) await Subject.insertMany(eceSem2);
-        if (meSem2.length) await Subject.insertMany(meSem2);
 
         console.log("🎉 Database seeded successfully!");
         mongoose.connection.close();
