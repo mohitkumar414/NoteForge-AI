@@ -3,6 +3,8 @@ import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/ge
 import connectDB from '@/lib/db';
 import CachedContent from '@/models/CachedContent';
 
+export const maxDuration = 150; // Extend timeout for AI processing 
+
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
 export async function POST(req: Request) {
