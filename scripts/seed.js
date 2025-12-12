@@ -4317,7 +4317,7 @@ async function seed() {
         // Logic: ECE/ME Sem 1 is the same as CSE Sem 2
         const eceSem1 = cseSem2Data.map(sub => ({
             ...sub,
-            branch: "Electronics & Communication",
+            branch: "Electronics & Communication Engineering",
             semester: 1
         }));
         const meSem1 = cseSem2Data.map(sub => ({
@@ -4329,7 +4329,7 @@ async function seed() {
         // Logic: ECE/ME Sem 2 is the same as CSE Sem 1
         const eceSem2 = cseSem1Data.map(sub => ({
             ...sub,
-            branch: "Electronics & Communication",
+            branch: "Electronics & Communication Engineering",
             semester: 2
         }));
         const meSem2 = cseSem1Data.map(sub => ({

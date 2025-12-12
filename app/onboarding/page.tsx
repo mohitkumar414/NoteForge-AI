@@ -18,7 +18,7 @@ export default function Onboarding() {
   const branches = [
     "Computer Science & Engineering",
     "Information Technology",
-    "Electronics & Communication",
+    "Electronics & Communication Engineering",
     "Mechanical Engineering"
   ];
   const semesters = [1, 2, 3, 4, 5, 6, 7];
