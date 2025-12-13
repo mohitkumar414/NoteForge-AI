@@ -323,20 +323,41 @@ export default function SubjectPage() {
           {activeModule === "Full Syllabus Paper" && (
             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="mb-8 overflow-hidden">
                <div className="p-8 bg-black/40 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl">
-                 <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
-                   <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-purple-300">Sample Examination Paper</h2>
-                   <div className="flex gap-2">
-                     <button onClick={() => handleDownload("paper-content", `${subject.subject_name}_Mock_Paper`)} disabled={downloading} className="text-slate-400 hover:text-white flex items-center gap-2 text-sm font-medium bg-white/5 px-3 py-1.5 rounded-lg hover:bg-white/10 transition-all disabled:opacity-50">
-                       {downloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />} PDF
-                     </button>
-                     <button onClick={() => handleCopy(notes["Full Syllabus Paper"])} className="text-slate-400 hover:text-white flex items-center gap-2 text-sm font-medium bg-white/5 px-3 py-1.5 rounded-lg hover:bg-white/10 transition-all">
-                       {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />} Copy
-                     </button>
-                   </div>
-                 </div>
-                 <div id="paper-content" className="prose prose-invert max-w-none">
-                    <ReactMarkdown>{notes["Full Syllabus Paper"]}</ReactMarkdown>
-                 </div>
+                 
+                 {/* CHECK FOR ERROR FIRST */}
+                 {errorModules["Full Syllabus Paper"] === 'RATE_LIMIT' ? (
+                    <div className="flex flex-col items-center justify-center py-10 text-center">
+                        <div className="text-6xl mb-4">😴</div>
+                        <h3 className="text-xl font-bold text-white mb-2">Daily limit has been exceeded</h3>
+                        <p className="text-slate-400">Our AI needs a nap. Please try again tomorrow!</p>
+                    </div>
+                 ) : 
+                 
+                 /* CHECK FOR LOADING STATE */
+                 generatingId === "Full Syllabus Paper" ? (
+                    <div className="flex flex-col items-center justify-center py-20 text-slate-400">
+                        <Loader2 className="w-12 h-12 animate-spin mb-4 text-purple-500" />
+                        <p className="text-lg animate-pulse">Designing a challenging paper for you...</p>
+                    </div>
+                 ) : (
+                    /* SHOW CONTENT */
+                    <>
+                        <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
+                        <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-purple-300">Sample Examination Paper</h2>
+                        <div className="flex gap-2">
+                            <button onClick={() => handleDownload("paper-content", `${subject.subject_name}_Mock_Paper`)} disabled={downloading} className="text-slate-400 hover:text-white flex items-center gap-2 text-sm font-medium bg-white/5 px-3 py-1.5 rounded-lg hover:bg-white/10 transition-all disabled:opacity-50">
+                            {downloading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />} PDF
+                            </button>
+                            <button onClick={() => handleCopy(notes["Full Syllabus Paper"])} className="text-slate-400 hover:text-white flex items-center gap-2 text-sm font-medium bg-white/5 px-3 py-1.5 rounded-lg hover:bg-white/10 transition-all">
+                            {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />} Copy
+                            </button>
+                        </div>
+                        </div>
+                        <div id="paper-content" className="prose prose-invert max-w-none">
+                            <ReactMarkdown>{notes["Full Syllabus Paper"]}</ReactMarkdown>
+                        </div>
+                    </>
+                 )}
                </div>
             </motion.div>
           )}
