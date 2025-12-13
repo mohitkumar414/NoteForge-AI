@@ -10,23 +10,23 @@ export async function POST(req: Request) {
 
     await connectDB();
 
-    // 1. Get all subjects for this semester
+    // All subjects for this semester
     const subjects = await Subject.find({ branch, semester }).select('subject_name modules');
 
-    // 2. Get all cached content counts for this user
+    // All cached content counts for this user
     const cachedData = await CachedContent.aggregate([
-      { $match: { user_id: userId, type: 'notes' } }, // Only count notes, not papers
+      { $match: { user_id: userId, type: 'notes' } }, 
       { $group: { _id: "$subject_id", count: { $sum: 1 } } }
     ]);
 
-    // 3. Map it together
+    // Mapping it together
     const stats = subjects.map(sub => {
         const cached = cachedData.find(c => c._id.toString() === sub._id.toString());
         return {
             name: sub.subject_name,
             completed: cached ? cached.count : 0,
             total: sub.modules.length,
-            fullMark: sub.modules.length // for Radar chart max domain
+            fullMark: sub.modules.length 
         };
     });
 

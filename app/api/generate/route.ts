@@ -3,24 +3,23 @@ import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/ge
 import connectDB from '@/lib/db';
 import CachedContent from '@/models/CachedContent';
 
-export const maxDuration = 150; // Extend timeout for AI processing 
+export const maxDuration = 60; 
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
 export async function POST(req: Request) {
   try {
-    // 1. EXTRACT userId FROM REQUEST BODY
     const { topics, subject, type, subjectId, identifier, userId } = await req.json();
 
     if (!topics || !subject || !subjectId || !identifier || !userId) {
-      return NextResponse.json({ error: "Missing required fields (including userId)" }, { status: 400 });
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
     await connectDB();
 
-    // 2. CHECK DATABASE WITH userId SCOPE
+    // CHECK DATABASE FIRST
     const existingData = await CachedContent.findOne({
-      user_id: userId, // Only look for data belonging to this user
+      user_id: userId,
       subject_id: subjectId,
       type: type,
       identifier: identifier
@@ -31,11 +30,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ content: existingData.content, source: 'cache' });
     }
 
-    // 3. IF NOT FOUND, CALL AI
+    // IF NOT FOUND, CALL AI
     console.log(`🤖 Cache Miss - Generating '${identifier}' for User ${userId}...`);
     
     let prompt = "";
-
     if (type === 'paper') {
         prompt = `
         You are a strict university examiner for B.Tech students.
@@ -48,7 +46,7 @@ export async function POST(req: Request) {
 
         **Structure:**
         1. **Questions 1-7:** Two parts (a) & (b), 7 marks each. (Mix of theory and numericals).
-        2. **Question 8:** Short notes on any TWO topics (4 options provided). 7 marks each.
+        2. **Question 8:** Short notes on any THREE topics (5 options provided). Total 14 marks.
 
         **Output:**
         1. The Question Paper.
@@ -69,7 +67,7 @@ export async function POST(req: Request) {
         - Explain concepts simply with real-world analogies where possible.
         - If a topic involves code (like C/Java/Python), provide a short snippet.
         - Keep it concise but comprehensive.
-        - Address the user as a single student.
+        - Don't start with an introduction like 'hello', 'welcome'; jump straight into the notes.
       `;
     }
 
@@ -89,10 +87,10 @@ export async function POST(req: Request) {
     const response = await result.response;
     const text = response.text();
 
-    // 4. SAVE TO DATABASE WITH userId
+    // SAVING TO DATABASE
     if (text) {
       await CachedContent.create({
-        user_id: userId, // Associate content with this specific user
+        user_id: userId,
         subject_id: subjectId,
         type: type,
         identifier: identifier,
@@ -105,6 +103,12 @@ export async function POST(req: Request) {
 
   } catch (error: any) {
     console.error("Generate Error:", error);
+    
+    // Checking for Rate Limit / Quota Exceeded
+    if (error.message?.includes("429") || error.message?.includes("Resource has been exhausted")) {
+        return NextResponse.json({ error: "Rate limit exceeded" }, { status: 429 });
+    }
+
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

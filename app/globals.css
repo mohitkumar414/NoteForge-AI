@@ -1,19 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f172a; /* Deep Slate Blue */
-  --foreground: #ffffff; /* White text */
-}
-
-@theme inline {
+  --background: #0f172a; 
+  --foreground: #ffffff; 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+
 body {
-  /* Vibrant Deep Gradient Background */
   background: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
               radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
               radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
@@ -27,7 +24,7 @@ body {
 
 /* Glassmorphism Cards */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05); /* Very transparent white */
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -41,7 +38,7 @@ body {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Custom Scrollbar (optional but looks nice) */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }

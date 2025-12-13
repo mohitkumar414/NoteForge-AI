@@ -9,10 +9,10 @@ interface RequestBody {
 
 export async function POST(req: NextRequest) {
   try {
-    // 1. Connect to the DB
+    
     await connectDB();
 
-    // 2. Read the user's selection from the request body
+    // Reading the user's selection from the request body
     const body: RequestBody = await req.json();
     const { branch, semester } = body;
 
@@ -25,14 +25,12 @@ export async function POST(req: NextRequest) {
 
     console.log(`🔍 Searching for: ${branch} - Sem ${semester}`);
 
-    // 3. Find subjects matching the criteria
-    // .select() is used to fetch only the fields we need (optimization)
+    // Finding subjects matching the criteria
     const subjects = await Subject.find({ 
       branch: branch, 
       semester: semester 
     }).select('subject_name _id');
 
-    // 4. Return the list
     return NextResponse.json({ subjects });
 
   } catch (error: any) {

@@ -1,18 +1,18 @@
 import { NextResponse } from 'next/server';
-import { auth } from "@/auth"; // Use the auth helper we created
+import { auth } from "@/auth"; 
 import connectDB from '@/lib/db';
 import User from '@/models/User';
 
 export async function POST(req: Request) {
   try {
-    // 1. Verify the user is actually logged in
+    // Verifying if the user is actually logged in
     const session = await auth();
     
     if (!session || !session.user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    // 2. Get data from the form
+    // Getting data from the form
     const { branch, semester } = await req.json();
 
     if (!branch || !semester) {
@@ -21,12 +21,11 @@ export async function POST(req: Request) {
 
     await connectDB();
 
-    // 3. Update the user in the database
-    // We use the email from the secure session, not the client, for security
+    // Updating the user in the database
     const updatedUser = await User.findOneAndUpdate(
       { email: session.user.email },
       { branch, semester },
-      { new: true } // Return the updated document
+      { new: true } 
     );
 
     return NextResponse.json({ success: true, user: updatedUser });

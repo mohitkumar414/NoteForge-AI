@@ -59,7 +59,7 @@ export default function Onboarding() {
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden bg-[#0f172a]">
       
-      {/* --- Animated Background Blobs --- */}
+      {/*  Animated Background Blobs  */}
       <motion.div 
         animate={{ scale: [1, 1.2, 1], x: [0, 50, 0], y: [0, -50, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -71,7 +71,7 @@ export default function Onboarding() {
         className="absolute bottom-[-10%] right-[-10%] w-96 h-96 bg-purple-600 rounded-full mix-blend-screen filter blur-[100px] opacity-20"
       />
 
-      {/* --- Main Glass Card --- */}
+      {/*  Main Glass Card  */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

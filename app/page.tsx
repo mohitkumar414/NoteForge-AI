@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { BookOpen, ChevronRight, Loader2, LogOut, Settings, Sparkles, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
-// Chart Components
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 interface Subject {
@@ -33,7 +32,7 @@ export default function Home() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [subjects, setSubjects] = useState<Subject[]>([]);
-  const [stats, setStats] = useState<StatData[]>([]); // New Stats State
+  const [stats, setStats] = useState<StatData[]>([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -43,7 +42,7 @@ export default function Home() {
         router.push('/onboarding');
       } else {
         fetchSubjects(user.branch, user.semester);
-        fetchStats(user.email, user.branch, user.semester); // Fetch Stats
+        fetchStats(user.email, user.branch, user.semester);
       }
     }
   }, [status, session, router]);
@@ -150,7 +149,7 @@ export default function Home() {
               <p className="text-slate-400 text-lg">Subjects for <span className="font-semibold text-blue-400">{(session.user as any).branch}</span> • Semester <span className="font-semibold text-purple-400">{(session.user as any).semester}</span></p>
             </motion.header>
 
-            {/* --- NEW: STATS CHART SECTION --- */}
+            {/* STATS CHART SECTION */}
             {stats.length > 0 && (
               <motion.div initial={{opacity: 0, y: 10}} animate={{opacity: 1, y:0}} className="mb-8 glass-card p-6 rounded-2xl">
                 <div className="flex items-center gap-2 mb-4 text-white font-semibold">

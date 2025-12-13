@@ -12,10 +12,10 @@ export async function POST(req: Request) {
 
     await connectDB();
 
-    // Find all identifiers (Topic Names / "Full Paper") that exist for this user & subject
+    // Finds all identifiers (Topic Names / "Full Paper") that exist for this user & subject
     const results = await CachedContent.find(
       { subject_id: subjectId, user_id: userId },
-      { identifier: 1, _id: 0 } // Select only the identifier field
+      { identifier: 1, _id: 0 }
     );
 
     const cachedIdentifiers = results.map((item) => item.identifier);
