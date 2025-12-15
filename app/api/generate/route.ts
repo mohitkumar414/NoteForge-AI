@@ -65,13 +65,13 @@ ${topics.join(", ")}
 Your goal is to provide content that a student can write **word-for-word** in their examination answer sheet to score maximum marks.
 
 Strict Guidelines for Each Topic:
-1. **Formal Definition**: Start with a precise, academic definition (2-3 lines).
-2. **Key Concepts (Point-wise)**: Explain the working principle or core concept using bullet points. Avoid long paragraphs.
+1. **Formal Definition**: Start with a precise, academic definition (4-5 lines).
+2. **Key Concepts (Point-wise)**: Explain the working principle or core concept using bullet points. Atleast 7 points.
 3. **Diagram/Flowchart Description**: Include a text block describing exactly what diagram the student should draw (e.g., "[Draw a block diagram showing Input -> Process -> Output]").
-4. **Technical Details**: Use technical terminology and standard keywords.
+4. **Technical Details**: Use technical terminology and standard keywords (7-8 points).
 5. **Code/Formula**: If applicable, provide the standard syntax, formula, or a generic code snippet (C/Java/Python).
-6. **Advantages & Disadvantages**: Provide 3-4 points for each.
-7. **Applications**: List 2-3 real-world uses.
+6. **Advantages & Disadvantages**: Provide 7-8 points for each.
+7. **Applications**: List 7-8 real-world uses.
 
 Formatting Rules:
 - Use Markdown.
