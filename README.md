@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 NoteForge AI
 
-## Getting Started
+> **An Intelligent Full-Stack Study Companion for Engineering Students**
 
-First, run the development server:
+![Project Banner](./assets/banner.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Overview
+**NoteForge AI** is a comprehensive study assistant designed to solve the problem of generic study materials. It uses **Generative AI (Google Gemini)** to create syllabus-specific notes, mock examination papers, and interactive study modules tailored to B.Tech curriculums.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Built with performance and user experience in mind, it features real-time audio playback with word-level highlighting ("Reader Mode"), PDF exports, and visual progress tracking.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Key Features
+* **🤖 AI-Powered Content:** Generates detailed notes and strict academic-style question papers using the Gemini 1.5 Flash model.
+* **🎙️ Smart Reader Mode:** Native text-to-speech engine with real-time "Karaoke-style" word highlighting for auditory learners.
+* **📊 Progress Analytics:** Visualizes study progress per subject using dynamic charts (Recharts).
+* **📝 Mock Exams:** Creates full-length, 70-mark mock papers with strict formatting (Part A/B) for exam practice.
+* **💾 Smart Caching:** Implements MongoDB caching to reduce API costs and load times for previously generated modules.
+* **🔐 Secure Auth:** Google OAuth integration via NextAuth.js for secure user sessions.
+* **📄 PDF Export:** One-click download of notes and papers as clean, formatted PDFs.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+**Frontend:**
+* ![Next.js](https://img.shields.io/badge/Next.js_14-black?style=flat&logo=next.js&logoColor=white) **App Router**
+* ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+* ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+* **Framer Motion** (Animations)
 
-To learn more about Next.js, take a look at the following resources:
+**Backend & Database:**
+* ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white)
+* ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white) **Mongoose**
+* ![Google Gemini](https://img.shields.io/badge/Google_Gemini_API-8E75B2?style=flat&logo=google&logoColor=white)
+* **NextAuth.js** (Authentication)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Deployment:**
+* ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚙️ Environment Variables
 
-## Deploy on Vercel
+To run this project locally, you will need to add the following environment variables to your `.env.local` file:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```env
+# Database
+MONGODB_URI=your_mongodb_connection_string
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# AI Provider
+GEMINI_API_KEY=your_google_gemini_api_key
+
+# Authentication (NextAuth / Auth.js)
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your_random_secret_string
+AUTH_SECRET=your_random_secret_string
+
+# Google OAuth
+GOOGLE_CLIENT_ID=your_google_console_client_id
+GOOGLE_CLIENT_SECRET=your_google_console_client_secret
