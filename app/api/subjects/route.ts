@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     const subjects = await Subject.find({ 
       branch: branch, 
       semester: semester 
-    }).select('subject_name _id');
+    }).select('subject_name _id').sort({ subject_name: 1 });
 
     return NextResponse.json({ subjects });
 

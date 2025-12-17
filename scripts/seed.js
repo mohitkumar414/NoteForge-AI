@@ -5815,37 +5815,6 @@ function sortSubjectsByName(dataArray) {
     });
 }
 
-// Semester 1
-sortSubjectsByName(cseSem1Data);
-sortSubjectsByName(eceSem1Data);
-sortSubjectsByName(meSem1Data);
-
-// Semester 2
-sortSubjectsByName(cseSem2Data);
-sortSubjectsByName(eceSem2Data);
-sortSubjectsByName(meSem2Data);
-
-// Semester 3
-sortSubjectsByName(cseSem3Data);
-sortSubjectsByName(eceSem3Data);
-
-// Semester 4
-sortSubjectsByName(cseSem4Data);
-sortSubjectsByName(eceSem4Data);
-
-// Semester 5
-sortSubjectsByName(cseSem5Data);
-sortSubjectsByName(eceSem5Data);
-
-// Semester 6
-sortSubjectsByName(cseSem6Data);
-sortSubjectsByName(itSem6Data);
-sortSubjectsByName(eceSem6Data);
-
-// Semester 7
-sortSubjectsByName(cseSem7Data);
-sortSubjectsByName(eceSem7Data);
-
 // --- 2. THE SCRIPT LOGIC ---
 
 const SubjectSchema = new mongoose.Schema({
@@ -5867,73 +5836,52 @@ async function seed() {
         await mongoose.connect(process.env.MONGODB_URI);
         console.log("✅ Connected to DB. Clearing old data...");
 
-        // Optional: Clear existing subjects to prevent duplicates
         await Subject.deleteMany({});
 
-        console.log("🚀 Seeding CSE/IT/ECE/ME Data...");
+        console.log("🔄 Generating IT Data...");
 
-        // Insert CSE Data
-        if (cseSem1Data.length) await Subject.insertMany(cseSem1Data);
-        if (eceSem1Data.length) await Subject.insertMany(eceSem1Data);
-        if (meSem1Data.length) await Subject.insertMany(meSem1Data);
-        if (cseSem2Data.length) await Subject.insertMany(cseSem2Data);
-        if (eceSem2Data.length) await Subject.insertMany(eceSem2Data);
-        if (meSem2Data.length) await Subject.insertMany(meSem2Data);
-        if (cseSem3Data.length) await Subject.insertMany(cseSem3Data);
-        if (eceSem3Data.length) await Subject.insertMany(eceSem3Data);
-        if (cseSem4Data.length) await Subject.insertMany(cseSem4Data);
-        if (eceSem4Data.length) await Subject.insertMany(eceSem4Data);
-        if (cseSem5Data.length) await Subject.insertMany(cseSem5Data);
-        if (eceSem5Data.length) await Subject.insertMany(eceSem5Data);
-        if (cseSem6Data.length) await Subject.insertMany(cseSem6Data);
-        if (itSem6Data.length) await Subject.insertMany(itSem6Data);
-        if (eceSem6Data.length) await Subject.insertMany(eceSem6Data);
-        if (cseSem7Data.length) await Subject.insertMany(cseSem7Data);
-        if (eceSem7Data.length) await Subject.insertMany(eceSem7Data);
+        // IT Sem 1-5, 7 is same as CSE Sem 1-5, 7
+        const itSem1 = cseSem1Data.map(sub => ({ ...sub, branch: "Information Technology", semester: 1 }));
+        const itSem2 = cseSem2Data.map(sub => ({ ...sub, branch: "Information Technology", semester: 2 }));
+        const itSem3 = cseSem3Data.map(sub => ({ ...sub, branch: "Information Technology", semester: 3 }));
+        const itSem4 = cseSem4Data.map(sub => ({ ...sub, branch: "Information Technology", semester: 4 }));
+        const itSem5 = cseSem5Data.map(sub => ({ ...sub, branch: "Information Technology", semester: 5 }));
+        const itSem7 = cseSem7Data.map(sub => ({ ...sub, branch: "Information Technology", semester: 7 }));
 
+        console.log("🔤 Sorting all subjects alphabetically...");
 
-        console.log("🔄 Auto-generating IT Data...");
+        // Sort Manual Data
+        sortSubjectsByName(cseSem1Data); sortSubjectsByName(eceSem1Data); sortSubjectsByName(meSem1Data);
+        sortSubjectsByName(cseSem2Data); sortSubjectsByName(eceSem2Data); sortSubjectsByName(meSem2Data);
+        sortSubjectsByName(cseSem3Data); sortSubjectsByName(eceSem3Data);
+        sortSubjectsByName(cseSem4Data); sortSubjectsByName(eceSem4Data);
+        sortSubjectsByName(cseSem5Data); sortSubjectsByName(eceSem5Data);
+        sortSubjectsByName(cseSem6Data); sortSubjectsByName(eceSem6Data); sortSubjectsByName(itSem6Data);
+        sortSubjectsByName(cseSem7Data); sortSubjectsByName(eceSem7Data);
 
-        // Logic: IT Sem 1,2,3,4,5,7 is same as CSE Sem 1,2,3,4,5,7
-        const itSem1 = cseSem1Data.map(sub => ({
-            ...sub,
-            branch: "Information Technology",
-            semester: 1
-        }));
-        const itSem2 = cseSem2Data.map(sub => ({
-            ...sub,
-            branch: "Information Technology",
-            semester: 2
-        }));
-        const itSem3 = cseSem3Data.map(sub => ({
-            ...sub,
-            branch: "Information Technology",
-            semester: 3
-        }));
-        const itSem4 = cseSem4Data.map(sub => ({
-            ...sub,
-            branch: "Information Technology",
-            semester: 4
-        }));
-        const itSem5 = cseSem5Data.map(sub => ({
-            ...sub,
-            branch: "Information Technology",
-            semester: 5
-        }));
-        const itSem7 = cseSem7Data.map(sub => ({
-            ...sub,
-            branch: "Information Technology",
-            semester: 7
-        }));
+        // Sort Generated Data
+        sortSubjectsByName(itSem1);
+        sortSubjectsByName(itSem2);
+        sortSubjectsByName(itSem3);
+        sortSubjectsByName(itSem4);
+        sortSubjectsByName(itSem5);
+        sortSubjectsByName(itSem7);
 
+        console.log("🚀 Inserting Data into Database...");
 
-        // Insert the Swapped Data
-        if (itSem1.length) await Subject.insertMany(itSem1);
-        if (itSem2.length) await Subject.insertMany(itSem2);
-        if (itSem3.length) await Subject.insertMany(itSem3);
-        if (itSem4.length) await Subject.insertMany(itSem4);
-        if (itSem5.length) await Subject.insertMany(itSem5);
-        if (itSem7.length) await Subject.insertMany(itSem7);
+        const allSubjects = [
+            ...cseSem1Data, ...eceSem1Data, ...meSem1Data,
+            ...cseSem2Data, ...eceSem2Data, ...meSem2Data,
+            ...cseSem3Data, ...eceSem3Data,
+            ...cseSem4Data, ...eceSem4Data,
+            ...cseSem5Data, ...eceSem5Data,
+            ...cseSem6Data, ...itSem6Data, ...eceSem6Data, 
+            ...cseSem7Data, ...eceSem7Data,
+            // Generated IT Subjects
+            ...itSem1, ...itSem2, ...itSem3, ...itSem4, ...itSem5, ...itSem7
+        ];
+
+        await Subject.insertMany(allSubjects);
 
         console.log("🎉 Database seeded successfully!");
         mongoose.connection.close();
