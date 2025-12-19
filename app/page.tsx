@@ -72,7 +72,12 @@ export default function Home() {
         body: JSON.stringify({ userId, branch, semester }),
       });
       const data = await res.json();
-      setStats(data.data || []);
+      if (data.data) {
+        data.data.sort((a: StatData, b: StatData) => a.name.localeCompare(b.name));
+        setStats(data.data);
+      } else {
+        setStats([]);
+      }
     } catch (error) {
       console.error("Stats Error:", error);
     }
