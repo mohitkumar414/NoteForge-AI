@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {/* Wrapping children in SessionProvider */}
+      {/* ADDED: bg-[#0f172a] text-white to default to dark mode instantly */}
+      <body className={`${inter.className} bg-[#0f172a] text-white`}>
         <SessionProvider>
           {children}
         </SessionProvider>
